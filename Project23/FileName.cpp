@@ -7,9 +7,17 @@ int countWords(string str);
 
 int main(void) {
 	
-	string s = "dog dog";
+	string input;
+	while (true) {
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, input);
+		if (input == "Q" || input == "q") break;
 
-	cout << "Word count: " << countWords(s) << endl;
+		else {
+			cout << "Word count: " << countWords(input) << endl;
+		}
+	}
+	return 0;
 }
 
 int countWords(string str) {
